@@ -7,54 +7,63 @@ const teamMembers = [
     initials: "SG",
     location: "Hafencenter",
     specialization: "Physiotherapie & Osteopathie",
+    description: "Inhaber Physiohandwerk",
   },
   {
     name: "Auguste Siefert",
     initials: "AS",
     location: "Hafencenter",
     specialization: "Physiotherapie",
+    description: "Mitarbeiter Physiohandwerk Team im Hafencenter",
   },
   {
     name: "Felix Hensler",
     initials: "FH",
     location: "Boulevard",
     specialization: "Physiotherapie & Sportphysiotherapie",
+    description: "Mitarbeiter Physiohandwerk Team im Hafencenter und am Boulevard",
   },
   {
     name: "Tanja Holetzke",
     initials: "TH",
     location: "Hafencenter",
-    specialization: "Physiotherapie",
+    specialization: "Physiotherapeutin",
+    description: "Physiotherapeutin im Hafencenter",
   },
   {
     name: "Nils Reinhard",
     initials: "NR",
     location: "Boulevard",
-    specialization: "Physiotherapie",
+    specialization: "Physiotherapeut",
+    description: "Physiotherapeut am Boulevard",
   },
   {
     name: "Isabel Specht",
     initials: "IS",
     location: "Hafencenter",
     specialization: "Physiotherapie",
+    description: "Physiotherapeutin im Hafencenter",
   },
   {
     name: "Martin Huber",
     initials: "MH",
     location: "Boulevard",
     specialization: "Physiotherapie",
+    description: "Physiotherapeut am Boulevard",
   },
   {
     name: "Nina Philipp",
     initials: "NP",
     location: "Hafencenter",
-    specialization: "Physiotherapie",
+    specialization: "Heilpraktikerin & Masseurin",
+    description: "Heilpraktikerin und Masseurin im Hafencenter",
   },
   {
     name: "Gerald Radimirsch",
     initials: "GR",
     location: "Boulevard",
-    specialization: "Physiotherapie",
+    specialization: "Craniosacraltherapeut",
+    description: "Craniosacraltherapeut am Boulevard",
   },
 ];
 
@@ -108,10 +117,13 @@ const AboutSection = () => {
                   <h4 className="text-xl font-semibold mb-2 text-foreground">
                     {member.name}
                   </h4>
-                  <p className="text-sm text-primary font-medium mb-2">
+                  <p className="text-sm text-primary font-medium mb-1">
                     {member.specialization}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs text-muted-foreground mb-2">
+                    {member.description}
+                  </p>
+                  <p className="text-xs text-muted-foreground font-medium">
                     {member.location}
                   </p>
                 </CardContent>
