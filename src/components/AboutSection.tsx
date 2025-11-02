@@ -50,6 +50,12 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Physiotherapie",
   },
+  {
+    name: "Gerald Radimirsch",
+    initials: "GR",
+    location: "Boulevard",
+    specialization: "Physiotherapie",
+  },
 ];
 
 const AboutSection = () => {
