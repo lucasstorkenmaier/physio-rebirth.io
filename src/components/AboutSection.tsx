@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
@@ -8,6 +9,7 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Physiotherapie & Osteopathie",
     description: "Inhaber Physiohandwerk",
+    slug: "sven-gruber",
   },
   {
     name: "Auguste Siefert",
@@ -15,6 +17,7 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Physiotherapie",
     description: "Mitarbeiter Physiohandwerk Team im Hafencenter",
+    slug: "auguste-siefert",
   },
   {
     name: "Felix Hensler",
@@ -22,6 +25,7 @@ const teamMembers = [
     location: "Boulevard",
     specialization: "Physiotherapie & Sportphysiotherapie",
     description: "Mitarbeiter Physiohandwerk Team im Hafencenter und am Boulevard",
+    slug: "felix-hensler",
   },
   {
     name: "Tanja Holetzke",
@@ -29,6 +33,7 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Physiotherapeutin",
     description: "Physiotherapeutin im Hafencenter",
+    slug: "tanja-holetzke",
   },
   {
     name: "Nils Reinhard",
@@ -36,6 +41,7 @@ const teamMembers = [
     location: "Boulevard",
     specialization: "Physiotherapeut",
     description: "Physiotherapeut am Boulevard",
+    slug: "nils-reinhard",
   },
   {
     name: "Isabel Specht",
@@ -43,6 +49,7 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Physiotherapie",
     description: "Physiotherapeutin im Hafencenter",
+    slug: "isabel-specht",
   },
   {
     name: "Martin Huber",
@@ -50,6 +57,7 @@ const teamMembers = [
     location: "Boulevard",
     specialization: "Physiotherapie",
     description: "Physiotherapeut am Boulevard",
+    slug: "martin-huber",
   },
   {
     name: "Nina Philipp",
@@ -57,6 +65,7 @@ const teamMembers = [
     location: "Hafencenter",
     specialization: "Heilpraktikerin & Masseurin",
     description: "Heilpraktikerin und Masseurin im Hafencenter",
+    slug: "nina-philipp",
   },
   {
     name: "Gerald Radimirsch",
@@ -64,6 +73,7 @@ const teamMembers = [
     location: "Boulevard",
     specialization: "Craniosacraltherapeut",
     description: "Craniosacraltherapeut am Boulevard",
+    slug: "gerald-radimirsch",
   },
 ];
 
@@ -103,12 +113,15 @@ const AboutSection = () => {
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
-              <Card 
-                key={member.name} 
-                className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+              <Link 
+                key={member.name}
+                to={`/team/${member.slug}`}
               >
-                <CardContent className="pt-8 pb-6">
+                <Card 
+                  className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in cursor-pointer hover:scale-105"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardContent className="pt-8 pb-6">
                   <Avatar className="w-24 h-24 mx-auto mb-4">
                     <AvatarFallback className="bg-primary text-primary-foreground text-2xl">
                       {member.initials}
@@ -128,6 +141,7 @@ const AboutSection = () => {
                   </p>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
         </div>
