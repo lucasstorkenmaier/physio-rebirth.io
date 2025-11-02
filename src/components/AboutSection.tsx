@@ -20,6 +20,36 @@ const teamMembers = [
     location: "Boulevard",
     specialization: "Physiotherapie & Sportphysiotherapie",
   },
+  {
+    name: "Tanja Holetzke",
+    initials: "TH",
+    location: "Hafencenter",
+    specialization: "Physiotherapie",
+  },
+  {
+    name: "Nils Reinhard",
+    initials: "NR",
+    location: "Boulevard",
+    specialization: "Physiotherapie",
+  },
+  {
+    name: "Isabel Specht",
+    initials: "IS",
+    location: "Hafencenter",
+    specialization: "Physiotherapie",
+  },
+  {
+    name: "Martin Huber",
+    initials: "MH",
+    location: "Boulevard",
+    specialization: "Physiotherapie",
+  },
+  {
+    name: "Nina Philipp",
+    initials: "NP",
+    location: "Hafencenter",
+    specialization: "Physiotherapie",
+  },
 ];
 
 const AboutSection = () => {
@@ -56,7 +86,7 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
             Unser <span className="text-primary">Team</span>
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
               <Card 
                 key={member.name} 
